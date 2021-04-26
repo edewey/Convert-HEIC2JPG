@@ -1,5 +1,5 @@
 # Convert-HEIC2JPG
-Simple Powershell script to convert all HEIC files in a directory to JPG using ImageMagick. 
+Apple's new default image format isn't always compatible with other softweare. This is a simple Powershell script to bulk convert all HEIC files in a directory to JPG using ImageMagick. 
 
 ## Usage
 
