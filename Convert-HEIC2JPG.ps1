@@ -1,9 +1,14 @@
-$files = Get-ChildItem -Filter *.heic
+param (
+    [parameter](mandatory = true, position = 1)]
+    [string]$convertFromDir
+)
 
-New-Item -Name HEIC2JPG -ItemType directory
+$files = Get-ChildItem -Path $convertFromDir -Filter *.heic
+
+$convertedDir = New-Item -Name HEIC2JPG -Path $convertFromDir -ItemType directory
 
 foreach($file in $files) {
     $newJPGFile = $file -Replace '\.heic$', '.jpg'
-    magick $file HEIC2JPG\$newJPGFile
-    Write-Host "Converted $file to HEIC2JPG\$newJPGFile"
+    magick $convertFromDir\$file $convertedDir\$newJPGFile
+    Write-Host "Converted $file to $convertedDir\$newJPGFile"
 }
