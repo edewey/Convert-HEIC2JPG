@@ -13,3 +13,4 @@ The script takes one argument, provide a directory path containing HEIC files yo
 ./Convert-HEIC2JPG.ps1 c:\users\ethan\downloads\photos\
 ```
 
+![Example script usage screenshot](https://i.imgur.com/x6qifbx.png)
