@@ -10,5 +10,5 @@ $convertedDir = New-Item -Name HEIC2JPG -Path $convertFromDir -ItemType director
 foreach($file in $files) {
     $newJPGFile = $file -Replace '\.heic$', '.jpg'
     magick $convertFromDir\$file $convertedDir\$newJPGFile
-    Write-Host "Converted $convertFromDir\$file to $convertedDir\$newJPGFile"
+    Write-Host "Converted $file to HEIC2JPG\$newJPGFile"
 }
