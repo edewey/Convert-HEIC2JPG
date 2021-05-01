@@ -1,5 +1,7 @@
+
+[CmdletBinding()]
 param (
-    [parameter(mandatory = true, position = 1)]
+    [parameter(mandatory = $true, position = 1)]
     [string]$convertFromDir
 )
 
